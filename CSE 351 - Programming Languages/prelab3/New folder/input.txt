@@ -1,0 +1,10 @@
+a = 3
+b = 5
+var = "ali"
+var2 = "ata"
+d = a + b
+var = var + var2
+c = a + b + 10 + 5.2
+f = 3.5
+g = 5.2
+res = f + g
