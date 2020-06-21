@@ -1,0 +1,21 @@
+#!/bin/bash
+ 
+
+if [[ $# -eq 0 ]] ; then
+    echo "There is no argument"
+    exit 0
+fi
+
+FILE=$1
+if [ ! -f "$FILE" ];
+then
+    echo "$FILE does not exist"
+fi
+echo yes
+gcc  myPreproc.c -o first
+./first $1
+rm first
+gcc expanded.c myDebugFunc.c myDebugHdr.h -o executed.out
+./executed.out
+
+
